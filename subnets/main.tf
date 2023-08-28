@@ -50,3 +50,4 @@ resource "aws_route" "nat_gw_route" {
   destination_cidr_block = "0.0.0.0/0"
   nat_gateway_id         = var.nat_gw_id
 }
+
