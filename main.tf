@@ -55,7 +55,7 @@ data "aws_ami" "centos8" {
   owners      = ["973714476881"]
 }
 
-module "subnet" {
+
 resource "aws_instance" "web" {
   ami           = data.aws_ami.centos8.id
   instance_type = "t3.micro"
@@ -65,7 +65,6 @@ resource "aws_instance" "web" {
   tags = {
     Name = "test"
   }
-}
 }
 
 
