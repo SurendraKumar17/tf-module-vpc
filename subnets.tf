@@ -1,5 +1,6 @@
 module "public_subnets" {
-  source            = "./subnets"
+#   source            = "./subnets"
+  source            = "github.com/SurendraKumar17/tf-module-subnets"
   default_vpc_id    = var.default_vpc_id
   env               = var.env
   availability_zone = var.availability_zone
@@ -17,7 +18,8 @@ module "public_subnets" {
 }
 
 module "private_subnets" {
-  source            = "./subnets"
+#   source            = "./subnets"
+  source            = "github.com/SurendraKumar17/tf-module-subnets"
   default_vpc_id    = var.default_vpc_id
   env               = var.env
   availability_zone = var.availability_zone
